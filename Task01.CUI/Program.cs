@@ -12,15 +12,18 @@ namespace Task01.CUI
     {
         static void Main(string[] args)
         {
-            var timerManager = new TimerManager(20);
-            var lstn1 = new Listner1();
-            var lstn2 = new Listner2();
-            var lstn3 = new Listner1();
+            var timerManager = new TimerManager(10);
+            var lstn1 = new Listner1("Jonh");
+            var lstn2 = new Listner2("Sara");
+            var lstn3 = new Listner1("Smith");
             lstn1.Register(timerManager);
             lstn2.Register(timerManager);
-            timerManager.StartCountDown("Time is over");
-            Thread.Sleep(5000);
+            timerManager.StartCountDown();
+            Thread.Sleep(15000);
             lstn3.Register(timerManager);
+            timerManager.StartCountDown();
+            timerManager.ResetTimer();
+            timerManager.StartCountDown();
             Console.ReadLine();
         }
     }
