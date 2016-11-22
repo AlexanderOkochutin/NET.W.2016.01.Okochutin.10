@@ -14,12 +14,12 @@ namespace Task02.Logic
         /// <summary>
         /// side a
         /// </summary>
-        public double A { get; protected set; }
+        public double A { get; }
 
         /// <summary>
         /// side b
         /// </summary>
-        public double B { get; protected set; }
+        public double B { get;}
 
         /// <summary>
         /// constructor of instance of rectangle
